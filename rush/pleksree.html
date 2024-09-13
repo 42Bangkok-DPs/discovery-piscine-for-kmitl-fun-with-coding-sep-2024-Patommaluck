@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        cv patommaluck
+    </title>
+<style>
+    .sidepanel {
+  height: auto; 
+    width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  padding-bottom: 100%;
+  transition: 0.5s; 
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+.openbtn {
+    display: block ;
+  font-size: 60px;
+  position: fixed;
+  cursor: pointer;
+  background-color: #f22525;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  z-index: 0;
+  cursor: pointer;
+  
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+
+</style>
+</head>
+<body>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">Home</a>
+        <a href="javascript:void(0)"onclick="h2Function()">Education</a>
+        <a href="javascript:void(0)"onclick="h3Function()">Contact</a>
+        <a href="javascript:void(0)" onclick="topFunction()"> Top page &uarr;</a>
+    </div>
+      
+    <h1><button id ="hidelogo"class="openbtn" onclick="openNav()"> &#9776 </button></h1>
+     <h2><div id="h2"><center><img src="2022.jpg" width="50%"></center></div></h2>
+     <h3 style="font-size:200%;"> &nbsp; <b>Education</b>  </h3> 
+     <p>&ensp;2022 - Now Currently studying in Electrical Engineering The Faculty of Engineering </p>
+     <p>&ensp;King Mongkut’s Institute of Technology Ladkrabang Bangkok, Thailand</p>
+     <p>&ensp;GPA : 2.62</p>
+     <p>&ensp;2017 - 2021 High School Certificate in Mathematicsand ScienceYothinburana School bangkok, Thailand</p>
+     <p>&ensp;GPA : 3.22</p><br>
+     <h3 style="font-size:200%;"> &nbsp; <b>Contact</b>  </h3> 
+     <p>&ensp;Tel : 0882454290 </p>
+     <p>&ensp;Email : patommaluck@gmail.com</p>
+     
+
+
+
+
+
+
+    <script>
+        let mybutton = document.getElementById("myBtn");
+        const gh2= document.getElementById("h2");
+        const gh3= document.getElementById("h3");
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+            document.getElementById("hidelogo").style.display = "none";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+            document.getElementById("hidelogo").style.display = "block";
+            
+        }
+        function topFunction() {
+            document.documentElement.scrollTop = 0; 
+        }
+        
+
+    </script>
+
+
+</body>
+</html>
