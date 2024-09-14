@@ -25,9 +25,26 @@ function smaller()
         sizecount=sizecount-5;
         document.getElementById("maincircle").style.height = sizecount +"px"; 
         document.getElementById("maincircle").style.width = sizecount+"px";
+
+
+
     
     }
- 
+  if(colorcount==1){
+        colorcount=2;
+        document.getElementById("maincircle").style.backgroundColor = 'blue';
+        
+         }
+        else if(colorcount==2){
+        colorcount=3;
+        document.getElementById("maincircle").style.backgroundColor = '';
+        
+        }
+        else if(colorcount==3){
+            colorcount=1;
+        document.getElementById("maincircle").style.backgroundColor = 'green';
+        
+        }
 }
 
 function nextcolor()
@@ -56,7 +73,7 @@ function nextcolor()
          }
         else if(colorcount==2){
         colorcount=3;
-        document.getElementById("maincircle").style.backgroundColor = 'red';
+        document.getElementById("maincircle").style.backgroundColor = '';
         
         }
         else if(colorcount==3){
