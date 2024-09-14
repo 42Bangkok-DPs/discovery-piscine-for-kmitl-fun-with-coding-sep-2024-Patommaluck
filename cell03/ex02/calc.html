@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        table, th, td {
+  border: 5px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: teal;
+}
+    </style>
+    <script>
+       
+        
+
+    function cal() 
+    {
+        const numb1 = document.getElementById("num1").value;
+        const opeb = document.getElementById("oper").value;
+        const numb2 = document.getElementById("num2").value;
+        let ans;
+            if (opeb == "+")
+            {
+                           
+                if (num2<=-1)
+                {
+                    alert("Error :(");
+                    console.log("Error :(");
+                    return;
+                }
+                else
+                {
+                ans = parseInt(numb1)+parseInt(numb2);
+                }
+              
+            }
+            else if(opeb == "-")
+            {
+                ans = parseInt(numb1)-parseInt(numb2);
+            }
+            else if(opeb == "*")
+            {
+                ans = parseInt(numb1)*parseInt(numb2);
+            }
+            else if (opeb == "/")
+            {
+                if (numb2=="0")
+                {
+                    alert("It's over 9000!");
+                    console.log("It's over 9000!");
+                    return;
+                }
+                else
+                {
+                ans = parseInt(numb1)/parseInt(numb2);
+                }
+            }
+            else if (opeb == "%")
+            {
+                if (numb2=="0")
+                {
+                    alert("It's over 9000!");
+                    console.log("It's over 9000!");
+                    return;
+                    
+                }
+                else{
+                ans = parseInt(numb1)%parseInt(numb2);
+                }
+            }
+
+        document.getElementById("result").value = ans;
+        if (ans>=0)
+        {
+            alert(ans);
+            console.log(ans);
+        }
+        else
+        {
+            alert("Error :(");
+            console.log("Error :(");
+        }
+        return false;
+    }
+
+
+    </script>
+<head>
+</head>
+<body>
+    <table style ="width:1000px" >
+        <tr style ="height:200px">
+        <td style ="width:50px"> 
+            <form>
+            
+            <input type="text" id="num1" name="num1"> num 1<br>
+            </form>  
+        </td>
+        <td style ="width:50px">  
+            <from>
+                
+                <select id="oper">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+            </from>  
+
+        </td>
+        <td style ="width:50px">  
+            <form>
+            
+            <input type="text" id="num2" name="num2">num 2<br>
+            </form>    
+        </td>
+        <td style ="width:50px"> 
+            
+            <input type="button" onclick="cal();" value="Try me!"><br>
+                
+        </td>
+        </tr>
+    </table>
+    <p id="result" name="r1">
+        <br />
+        </p>
+</body>
+</html>
