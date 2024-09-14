@@ -1,8 +1,108 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="balloon.css">
+    <style>
+        .circle 
+        {
+  --main-bg-color:red;
+  height: 200px;
+  width: 200px;
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  display: inline-block;
+  margin: auto;
+  cursor: pointer;
+          }
+    </style>
 <head>
-    <script type = "text/javascript" src="balloon.js"></script>
+    <script>
+var sizecount=200;
+let colorcount=1;
+function smaller() 
+{
+    if (sizecount>200)
+    {
+    
+        sizecount=sizecount-5;
+        document.getElementById("maincircle").style.height = sizecount +"px"; 
+        document.getElementById("maincircle").style.width = sizecount+"px";
+    
+    }
+ 
+}
+
+function nextcolor()
+{
+        
+        if(colorcount==1){
+            colorcount=2;
+            document.getElementById("maincircle").style.backgroundColor = 'green';
+            
+        }
+        else if(colorcount==2){
+            colorcount=3;
+            document.getElementById("maincircle").style.backgroundColor = 'blue';
+            
+        }
+        else if(colorcount==3){
+            colorcount=1;
+            document.getElementById("maincircle").style.backgroundColor = 'red';
+            
+        }
+
+        if(colorcount==1){
+        colorcount=2;
+        document.getElementById("maincircle").style.backgroundColor = 'blue';
+        
+         }
+        else if(colorcount==2){
+        colorcount=3;
+        document.getElementById("maincircle").style.backgroundColor = 'red';
+        
+        }
+        else if(colorcount==3){
+            colorcount=1;
+        document.getElementById("maincircle").style.backgroundColor = 'green';
+        
+        }
+} 
+
+
+function bigger() 
+{
+    if (sizecount<=450)
+    {
+        sizecount=sizecount+10;
+        document.getElementById("maincircle").style.height = sizecount +"px"; 
+        document.getElementById("maincircle").style.width = sizecount+"px";
+        
+    }
+    else if (sizecount>450)
+    {
+        sizecount=200;
+        document.getElementById("maincircle").style.height = sizecount +"px"; 
+        document.getElementById("maincircle").style.width = sizecount+"px";
+        
+    }
+
+    if(colorcount==1){
+        colorcount=2;
+        document.getElementById("maincircle").style.backgroundColor = 'green';
+        
+    }
+    else if(colorcount==2){
+        colorcount=3;
+        document.getElementById("maincircle").style.backgroundColor = 'blue';
+        
+    }
+    else if(colorcount==3){
+        colorcount=1;
+        document.getElementById("maincircle").style.backgroundColor = 'red';
+        
+    }
+
+   
+}
+    </script>
 </head>
 <body>
     <center>
