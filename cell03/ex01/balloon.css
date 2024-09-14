@@ -1,0 +1,13 @@
+
+.circle 
+{
+  --main-bg-color:red;
+  height: 200px;
+  width: 200px;
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  display: inline-block;
+  margin: auto;
+  cursor: pointer;
+  
+}
