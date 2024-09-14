@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        #ft_list
+        {
+          margin: auto;
+          width: 300px;
+          margin-top: 20px;
+            
+        }
+        .text-item{
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .text-item:hover {
+            background-color: teal;
+        }
+    </style>
+<head>
+   <title>
+    ex03
+   </title> 
+</head>
+<body>
+    <h1 style="size: 200%;"><center> LIST </center></h1> <br>
+    <center><input type="button" value="Create New List" onclick="createtodo()"></center> <br>
+    
+    <div id="ft_list">
+        
+
+    </div>
+    
+</body>
+<script src="todo.js"></script>
+</html>
